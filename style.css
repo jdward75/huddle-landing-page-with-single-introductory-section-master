@@ -8,47 +8,138 @@
   padding: 0;
 }
 .outer-container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--violet);
+}
+
+.header-image-container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 60px;
+  flex: 1;
+  padding: 30px 35px 40px 35px;
   background-image: url("images/bg-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.inner-container {
+.huddle-logo {
+  width: 125px;
+}
+.mockup-image {
+  margin: auto 0;
+  width: 100%;
+}
+.register-footer-container {
   max-width: 600px;
-  margin: 60px;
-}
-.header {
-  margin-bottom: 50px;
-}
-.main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
-  flex-grow: 1;
+  flex: 1;
+  gap: 45px;
+  padding: 0px 35px 40px 35px;
+  text-align: center;
+}
+.register {
+  margin: auto 0;
+}
+.register-header {
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 25px;
+}
+.register-description {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 25px;
+}
+.register-button {
+  width: 225px;
+  padding: 13px;
+  border-radius: 25px;
+  color: var(--violet);
+}
+.fa-brands {
+  font-size: 12px;
+  padding: 7px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 5px;
 }
 
-.mockup-image {
-  width: 100%;
+@media (min-width: 600px) {
+  .outer-container {
+    background-image: url("images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .header-image-container {
+    background-image: none;
+  }
 }
 
 @media (min-width: 1200px) {
   .outer-container {
-    background-image: url("images/bg-desktop.svg");
-  }
-  .inner-container {
-    max-width: none;
-  }
-  .main {
     flex-direction: row;
-    flex-grow: 1;
+    align-items: stretch;
+    justify-content: center;
+  }
+  .header-image-container {
+    min-width: 750px;
+    max-width: 850px;
+    padding: 50px 65px 55px 65px;
+  }
+  .huddle-logo {
+    width: 215px;
   }
   .mockup-image {
-    width: 50%;
+    width: none;
+  }
+  .register-footer-container {
+    padding: 100px 55px 40px 0px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .register-header {
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 40px;
+  }
+  .register-description {
+    margin-bottom: 25px;
+    color: white;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 100;
+  }
+  .register-button {
+    width: 200px;
+    padding: 18px;
+    border-radius: 30px;
+    font-size: 16px;
+  }
+  .register-footer {
+    align-self: flex-end;
+  }
+  .fa-brands {
+    font-size: 15px;
+    padding: 12px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 5px;
   }
 }
