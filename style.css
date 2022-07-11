@@ -40,8 +40,8 @@
   flex-direction: column;
   align-items: center;
   flex: 1;
-  gap: 45px;
-  padding: 0px 35px 40px 35px;
+  gap: 35px;
+  padding: 0px 35px 35px 35px;
   text-align: center;
 }
 .register {
