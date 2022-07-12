@@ -7,28 +7,34 @@
   margin: 0;
   padding: 0;
 }
-.outer-container {
+
+body {
   min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background-color: var(--violet);
+}
+.main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--violet);
+  justify-content: center;
+  max-width: 600px;
 }
 
 .header-image-container {
-  max-width: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 60px;
-  flex: 1;
-  padding: 30px 35px 40px 35px;
+  padding: 30px 35px 60px 35px;
   background-image: url("images/bg-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  flex: 1;
 }
 .huddle-logo {
   width: 125px;
+  margin-bottom: 50px;
 }
 .mockup-image {
   margin: auto 0;
@@ -52,33 +58,37 @@
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: white;
-  font-size: 25px;
+  font-size: 24px;
 }
 .register-description {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: white;
   font-size: 16px;
-  line-height: 25px;
+  line-height: 24px;
   margin-bottom: 25px;
 }
 .register-button {
-  width: 225px;
+  width: 200px;
   padding: 13px;
   border-radius: 25px;
   color: var(--violet);
 }
 .fa-brands {
   font-size: 12px;
-  padding: 7px;
   color: white;
   border: 1px solid white;
+  margin: 3px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  margin: 5px;
+  text-align: center;
+  line-height: 30px;
+  vertical-align: middle;
 }
 
 @media (min-width: 600px) {
-  .outer-container {
+  body {
     background-image: url("images/bg-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,24 +99,29 @@
 }
 
 @media (min-width: 1200px) {
-  .outer-container {
+  body {
+    align-items: center;
+  }
+  .main-container {
     flex-direction: row;
     align-items: stretch;
     justify-content: center;
+    max-width: 1440px;
   }
   .header-image-container {
     min-width: 750px;
     max-width: 850px;
-    padding: 50px 65px 55px 65px;
+    padding: 50px 35px 100px 65px;
   }
   .huddle-logo {
     width: 215px;
+    margin-bottom: 85px;
   }
   .mockup-image {
-    width: none;
+    width: 100%;
   }
   .register-footer-container {
-    padding: 100px 55px 40px 0px;
+    padding: 100px 65px 30px 0px;
     justify-content: flex-end;
     align-items: flex-start;
     text-align: left;
@@ -135,11 +150,15 @@
     align-self: flex-end;
   }
   .fa-brands {
-    font-size: 15px;
-    padding: 12px;
+    font-size: 18px;
     color: white;
     border: 1px solid white;
-    border-radius: 50%;
     margin: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
   }
 }
